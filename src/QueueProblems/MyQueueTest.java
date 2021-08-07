@@ -1,7 +1,29 @@
 package QueueProblems;
 
+import org.junit.Assert;
+import org.junit.Test;
+
+import LinkedListProblems.INode;
+import LinkedListProblems.MyNode;
+
 public class MyQueueTest {
-	public static void main(String[] args) {
-		System.out.println("Welcome to the Queue Problems!");
+	@Test
+	public void test() {
+		
+		
+		MyNode<Integer> myFirstNode = new MyNode<>(70);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(56);
+		
+		MyQueue myQueue = new MyQueue();
+		myQueue.enqueue(myThirdNode);
+		myQueue.enqueue(mySecondNode);
+		myQueue.enqueue(myFirstNode);
+		
+		myQueue.printStack();
+		
+		INode peak = myQueue.peak();
+		Assert.assertEquals(myThirdNode,peak);
+		
 	}
 }
