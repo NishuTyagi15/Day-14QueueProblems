@@ -16,7 +16,7 @@ public class MyQueue {
 		
 	}
 
-	public void printStack() {
+	public void printQueue() {
 		MyLinkedListTest.printMyNodes();
 		
 	}
